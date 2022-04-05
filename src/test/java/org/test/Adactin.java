@@ -12,7 +12,15 @@ public static void main(String[] args) {
 	WebDriverManager.chromedriver().setup();
 	WebDriver driver= new ChromeDriver();
 	driver.get("http://adactinhotelapp.com/");
+	WebElement username = driver.findElement(By.id("username"));
+	username.sendKeys("ilango");
+	WebElement password = driver.findElement(By.id("password"));
+	password.sendKeys("12345");
+
 	WebElement login = driver.findElement(By.id("login"));
 	login.click();
+
+	
+
 }
 }
